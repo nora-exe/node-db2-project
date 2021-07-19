@@ -19,7 +19,7 @@ const checkCarId = async (req, res, next) => {
 const checkCarPayload = (req, res, next) => {
   if (!req.body.vin) return next({
     status: 400,
-    message: 'VIN is missing'
+    message: 'vin is missing'
   })
   if (!req.body.make) return next({
     status: 400,
@@ -42,7 +42,7 @@ const checkVinNumberValid = (req, res, next) => {
   } else {
     next({
       status: 400,
-      message: `VIN ${req.body.vin} is invalid`
+      message: `vin ${req.body.vin} is invalid`
     })
   }
 }
@@ -55,7 +55,7 @@ const checkVinNumberUnique = async (req, res, next) => {
     } else {
       next({
         status: 400,
-        message: `VIN ${req.body.vin} already exists`
+        message: `vin ${req.body.vin} already exists`
       })
     }
   } catch (err) {
