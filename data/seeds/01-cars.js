@@ -30,7 +30,7 @@ const cars = [
         make: 'toyota',
         model: 'tacoma',
         mileage: '10',
-        title: 'compromising',
+        title: 'compensating',
     },
 ]
 
